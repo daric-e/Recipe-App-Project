@@ -7,6 +7,7 @@ import RecipeData from "./RecipeData"
 function App() {
   const [recipes, setRecipes] = useState(RecipeData);
   
+  // Takes a recipe object and adds it to the list of recipes
   const addRecipe = (recipe) => {
     setRecipes([
       ...recipes,
@@ -14,11 +15,8 @@ function App() {
     ]);
   }
   
+  // Takes an id (index) of a recipe and removes it from the list of recipes
   const deleteRecipe = (id) => setRecipes(recipes.filter((r, idx) => idx !== id));
-
-  // TODO: Add the ability for the <RecipeList /> component to list and delete an existing recipe.
-  // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
-
   
   return (
     <div className="App">
